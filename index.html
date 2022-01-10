@@ -63,11 +63,12 @@
         async function sendMsg() {
             alert("Hello");
             if (liff.getContext().type !== "none") {
-                alert("MTYPE:" + liff.getContext().type)
+                alert("STYPE:" + liff.getContext().type)
                 await liff.sendMessages([{
-                    type: 'text',
-                    text: 'test message',
-                }]);
+                    "type": "sticker",
+                    "stickerId": 3,
+                    "packageId": 1
+                }])
                 alert("Message sent")
             }
         }
