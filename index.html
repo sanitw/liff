@@ -61,6 +61,7 @@
         async function getFriendship() {}
 
         async function sendMsg() {
+            alert("Hello");
             if (liff.getContext().type !== "none") {
                 await liff.sendMessages([{
                     "type": "sticker",
