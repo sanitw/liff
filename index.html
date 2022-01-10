@@ -31,7 +31,7 @@
     <p id="universalLink2"><b>Universal Link with Query params:</b> </p>
     <p><a href="liff/path/?param=9">Link to Path</a></p>
 
-    <button id="btnMsg" onclick="sendMsg()">Send Message</button>
+    <button id="btnMsg" onclick="sendMsg()">ASend Message</button>
     <button id="btnShare" onclick="shareMsg()">Share Target Picker</button>
     <button onclick="openWindow()">Open Window</button>
     <button id="btnScanCode" onclick="scanCode()">Scan Code</button>
@@ -63,10 +63,10 @@
         async function sendMsg() {
             alert("Hello");
             if (liff.getContext().type !== "none") {
-                alert("STYPE:" + liff.getContext().type)
+                alert("ATYPE:" + liff.getContext().type)
                 await liff.sendMessages([{
                     "type": "sticker",
-                    "stickerId": 3,
+                    "stickerId": 1,
                     "packageId": 1
                 }])
                 alert("Message sent")
