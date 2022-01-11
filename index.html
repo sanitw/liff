@@ -33,8 +33,8 @@
 
     <button id="btnMsg" onclick="sendMsg()">ASend Message</button>
     <button id="btnShare" onclick="shareMsg()">Share Target Picker</button>
-    <button onclick="openWindow()">XOpen Window</button>
-    <button id="btnScanCode" onclick="scanCode()">XScan Code</button>
+    <button onclick="openWindow()">YOpen Window</button>
+    <button id="btnScanCode" onclick="scanCode()">YScan Code</button>
     <button id="btnLogOut" onclick="logOut()">Log Out</button>
     <button id="btnClose" onclick="closed()">Close</button>
 
@@ -56,13 +56,13 @@
 
         async function scanCode() {
             const result = await liff.scanCode();
-            document.getElementById("scanCode").append(result.valut);
+            document.getElementById("scanCode").append(result.value);
         }
 
         function openWindow() {
             liff.openWindow({
                 url: 'https://www.google.co.th',
-                external: 'true'
+                external: 'false'
             });
         }
 
